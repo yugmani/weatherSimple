@@ -8,30 +8,63 @@
 </head>
 <body class="text-center">
     <main>
-        <h1 class="banner p-3">Weather</h1>
+        <h1 class="banner p-3">WEATHER</h1>
         <div class="form-group">
-            <input id="city-input" class="form-control form-control-lg" type="text" placeholder="Search city">
+            <input id="city-input" class="form-control form-control-lg" type="text" placeholder="Search city" >
+            <img src="images/searchicon.png" width:"50px" id="search-icon">
         </div>
         <!-- onclick="searchCity()" -->
-        <button type="button"  id="search-button" class="btn btn-lg btn-dark">Search</button>
+        <!-- <button type="button"  id="search-button" class="btn btn-lg btn-primary">Search</button> -->
+        
+        <!-- Weather Dashboard -->
         <div id="weather-output" class="mt-3">
-          <div class="card-deck mb-3 text-center">
-              <div class="card mb-4 shadow-sm">
+          <div class="card-deck text-center">
+              <div class="card shadow-sm">
                 <div class="card-header">
-                  <h4 id="city-name" class="my-0 font-weight-normal">----</h4>
+
+                  <!-- Name of city -->
+                  <h2 id="city-name" class="my-0 font-weight-normal">----</h2>
                 </div>
                 <div class="card-body">
-                  <h1 id="weather-type" class="card-title">----</h1>
-                  <ul class="list-unstyled mt-3 mb-4">
-                    <li>Temp: <span id="temp">--</span>°</li>
-                    <li>Min Temp: <span id="min-temp">--</span>°</li>
-                    <li>Max Temp: <span id="max-temp">--</span>°</li>
-                  </ul>
+                  <div id="weather-image" class="mb-4"> </div>
+                  <!-- Weather type -->
+                  <h2 id="weather-type" class="card-title">----</h2>
+                    
                 </div>
               </div>
           </div>
+          <div id="list">
+            <h3>Weather Details</h3>
+            <table>
+              <tr>
+                <td>Temperature</td>
+                <td><span id="temp">--</span>°</td>
+              </tr>
+              <tr>
+                <td>Min-Temperature</td>
+                <td><span id="min-temp">--</span>°</td>
+              </tr>
+              <tr>
+                <td>Max-Temperature</td>
+                <td><span id="max-temp">--</span>°</td>
+              </tr>
+              <tr>
+                <td>Humidity</td>
+                <td><span id="humidity">--</span>°</td>
+              </tr>
+            </table>
+
+              <!-- <ul class="list-unstyled mt-3 mb-4"> -->
+                  <!-- Weather Details -->
+                  <!-- <li>Temperature: <span id="temp">--</span>°</li>
+                  <li>Min Temperature: <span id="min-temp">--</span>°</li>
+                  <li>Max Temperature: <span id="max-temp">--</span>°</li>
+                  <li>Humidity: <span id="humidity">--</span></li>
+              </ul> -->
+        </div>
         </div>
     </main>
+    <!-- <script src="weathertype.js"></script> -->
     <script src="script.js"></script>
 </body>
 </html>

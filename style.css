@@ -1,12 +1,73 @@
 
 
 
-#city-input, #weather-output {
-    max-width: 400px;
+#weather-output {
+    max-width: 320px;
     margin: 0 auto;
 }
-  
+
+#city-input {
+    max-width: 260px;
+    margin: 0 auto;
+    outline:none;
+    border:none;
+}
+
+.card-body {
+    height:180px;
+}
+
 .banner {
     color: #FFD23F;
     font-family: sans-serif;
+}
+
+#list {
+    width:100%;
+    background-color:#F5F5F5;
+    margin:0;
+    padding:15px;
+    border:1px solid lightgray;
+    border-radius:5px;
+}
+
+table {
+    margin:0 auto;
+}
+
+table tr td {
+    text-align:left;
+    margin-left:25px;
+}
+
+table tr td span {
+    padding-left:25px;
+    font-weight:bold;
+}
+
+/* ul > li {
+    text-align:left;
+    margin-left:25px;
+}
+
+ul li span {
+    font-weight:bold;
+} */
+
+.form-group {
+    margin:0 auto;
+    max-width:320px;
+    display:flex;
+    justify-content: space-between;
+    border:1px solid lightgray;
+    border-radius:8px;
+    padding:5px;
+}
+
+#search-icon {
+    width:35px;
+    height:auto;
+   color:black;
+   cursor:pointer;
+   /* border:1px solid lightgray; */
 }
