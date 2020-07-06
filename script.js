@@ -6,8 +6,7 @@
  */
 
 // API_KEY for maps api
-let API_KEY = "a8e71c9932b20c4ceb0aed183e6a83bb";
-let MY_KEY = 'e84e170dc52b22e9142ded9022d2d046';
+
 let MY_URL = 'api.openweathermap.org/data/2.5/weather?q={city name}&appid={your api key}';
 /**
  * Retrieve weather data from openweathermap
