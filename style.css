@@ -1,6 +1,4 @@
 
-
-
 #weather-output {
     max-width: 320px;
     margin: 0 auto;
@@ -45,15 +43,6 @@ table tr td span {
     font-weight:bold;
 }
 
-/* ul > li {
-    text-align:left;
-    margin-left:25px;
-}
-
-ul li span {
-    font-weight:bold;
-} */
-
 .form-group {
     margin:0 auto;
     max-width:320px;
@@ -69,5 +58,4 @@ ul li span {
     height:auto;
    color:black;
    cursor:pointer;
-   /* border:1px solid lightgray; */
 }

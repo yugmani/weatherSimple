@@ -1,7 +1,10 @@
 
 // API_KEY for maps api
+// let MY_KEY = 'e84e170dc52b22e9142ded9022d2d046';
+// let API_KEY = "a8e71c9932b20c4ceb0aed183e6a83bb";
 
 let MY_KEY = "";
+const cityEl = document.getElementById("city-name");
 
 // Function to get weather data from url using api key.
 const getWeatherData = (city) => {
@@ -12,7 +15,9 @@ const getWeatherData = (city) => {
       MY_KEY = prompt("Enter your API key [https://openweathermap.org/]");
       }
       else {
-        alert("First get your API key from https://openweathermap.org/");
+        cityEl.textContent = "Get your API key from https://openweathermap.org/";
+        cityEl.style.color = "red";
+        cityEl.style.fontSize = "20px";
         return;
       }
     }
@@ -21,8 +26,12 @@ const getWeatherData = (city) => {
         return response.json()
     })
     .then(weatherData=>{
-        console.log(weatherData);
         showWeatherData(weatherData);
+    }).catch(()=>{
+      cityEl.textContent = "City Not Found";
+      cityEl.style.color = "red";
+      cityEl.style.transform = "rotate(10deg)";
+      cityEl.style.transition = "2s ease";
     })
 };
 
@@ -40,7 +49,7 @@ const searchCity = () => {
 
 // Function to display the weather information in HTML 
 const showWeatherData = (weatherData) => {
-    const cityEl = document.getElementById("city-name");
+    
     const weatherType = document.getElementById("weather-type");
     const tempEl = document.getElementById("temp");
     const minTemp = document.getElementById("min-temp");
@@ -77,7 +86,7 @@ var weatherArray = [
 const weatherImage = (type, array)=>{
   const imageEl = document.getElementById("weather-image");
   let src = "";
-  let img = "";
+  let imgDiv = "";
   if (imageEl.hasChildNodes()) {
     imageEl.removeChild(imageEl.childNodes[0]);
   }
@@ -90,11 +99,7 @@ const weatherImage = (type, array)=>{
   if(src==="") {
     src = "./images/searchicon.png";
   } 
-  console.log(src);
   
-  img = document.createElement("img");
-  img.setAttribute("src", src);
-  img.style.width = "80px";
-  imageEl.appendChild(img);
-  
+  imgDiv = document.getElementById("png");
+  imgDiv.src = src;
   }
